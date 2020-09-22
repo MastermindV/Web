@@ -1,0 +1,11 @@
+.Opções{
+    width: 10vw;
+    height: auto;
+}
+body{
+    background-color: blue;
+}
+.ImagemJogo{
+    float: left;
+    max-width: 50%;
+}

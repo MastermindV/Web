@@ -4,21 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="Scripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="Estilo.css">
         <title>Game jokempô</title>
     </head>
     <body>
-        <p id="resultado">Resultado</p>
-        <div style="float: left;">
+        <h1 id="resultado">Resultado</h1>
+        <div class="ImagemJogo">
             <img id="computador" src="fundoCinza.png">
         </div>
 
-        <div>
+        <div class="ImagemJogo">
             <img id="jogador" src="fundoCinza.png">
         </div>
         <br>
-        Clique na imagem para fazer sua jogada <br>
-        <img id="pedra" onclick="jogada(0)" src="pedra.png">
-        <img id="papel" onclick="jogada(1)" src="papel.png">
-        <img id="tesoura" onclick="jogada(2)" src="tesoura.png">
+        <h2>Clique na imagem para fazer sua jogada</h2> <br>
+        <img class="Opções" onclick="jogada(0)" src="pedra.png">
+        <img class="Opções" onclick="jogada(1)" src="papel.png">
+        <img class="Opções" onclick="jogada(2)" src="tesoura.png">
+        <p id="vitorias">Vitorias: 0</p>
+        <p id="derrotas">Derrotas: 0</p>
     </body>
 </html>

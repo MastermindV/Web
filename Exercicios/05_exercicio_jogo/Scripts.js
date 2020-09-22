@@ -1,3 +1,5 @@
+var vitorias = 0;
+var derrotas = 0;
 function jogada(opcaoJogador) {
     var imagemEscolhida;
     switch (opcaoJogador) {
@@ -26,34 +28,38 @@ function jogada(opcaoJogador) {
     var resultado;
     if (opcaoJogador == 0) {
         switch (sorteio) {
-            case 0: resultado = 'empate';
+            case 0: resultado = 'Empatou';
                 break;
-            case 1: resultado = 'perdeu';
+            case 1: resultado = 'Perdeu'; derrotas++
                 break;
-            case 2: resultado = 'venceu';
+            case 2: resultado = 'Venceu'; vitorias++;
                 break;
         }
     }
     if (opcaoJogador == 1) {
         switch (sorteio) {
-            case 0: resultado = 'venceu';
+            case 0: resultado = 'Venceu'; vitorias++;
                 break;
-            case 1: resultado = 'empatou';
+            case 1: resultado = 'Empatou';
                 break;
-            case 2: resultado = 'perdeu';
+            case 2: resultado = 'Perdeu'; derrotas++
                 break;
         }
     }
     if (opcaoJogador == 2) {
         switch (sorteio) {
-            case 0: resultado = 'perdeu';
+            case 0: resultado = 'Perdeu'; derrotas++
                 break;
-            case 1: resultado = 'venceu';
+            case 1: resultado = 'Venceu'; vitorias++;
                 break;
-            case 2: resultado = 'empatou';
+            case 2: resultado = 'Empatou';
                 break;
         }
     }
     var resultadoFinal = document.getElementById('resultado');
     resultadoFinal.innerHTML = resultado;
+    var textoVitorias = document.getElementById('vitorias');
+    textoVitorias.innerHTML = 'Vitorias: ' +vitorias;
+    var textoDerrotas = document.getElementById('derrotas');
+    textoDerrotas.innerHTML = 'Derrotas: ' +derrotas;
 }
